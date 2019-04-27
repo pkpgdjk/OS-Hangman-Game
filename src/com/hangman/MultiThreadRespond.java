@@ -31,6 +31,17 @@ public class MultiThreadRespond implements Runnable{
                 ois = new ObjectInputStream(socket.getInputStream());
                 //convert ObjectInputStream object to String
                 String message = (String) ois.readObject();
+                System.out.println("Message Received: " + message);
+                //create ObjectOutputStream object
+                oos = new ObjectOutputStream(socket.getOutputStream());
+                //write object to Socket
+                oos.writeObject("Hi Client "+message);
+                //close resources
+                ois.close();
+                oos.close();
+                socket.close();
+                //terminate the server if client sends exit request
+                if(message.equalsIgnoreCase("exit")) break;
 
             }catch(Exception e){
 
