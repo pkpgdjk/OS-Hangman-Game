@@ -43,6 +43,7 @@ public class MultiThreadRespond implements Runnable{
                 //terminate the server if client sends exit request
                 if(message.equalsIgnoreCase("exit")) break;
 
+
             }catch(Exception e){
 
             }
