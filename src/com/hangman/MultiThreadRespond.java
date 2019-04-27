@@ -22,6 +22,16 @@ public class MultiThreadRespond implements Runnable{
 
     @Override
     public void run() {
+        while(true){
+            try{
+
+            }catch(Exception e){
+
+            }
+
+        }
+
+
 
     }
 }
