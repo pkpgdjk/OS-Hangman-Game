@@ -27,6 +27,7 @@ public class Server {
                 String message = (String) ois.readObject();
                 System.out.println("Message Client Received: " + message);
                 Random rand = new Random();
+                //Generate Thread and port
                 int newPort = rand.nextInt(9000)+1000;
                 MultiThreadRespond multiThreadRespond = new MultiThreadRespond(newPort);
                 thread = new Thread(multiThreadRespond);
