@@ -101,11 +101,19 @@ public class MultiThreadRespond implements Runnable{
 
                         // Game Logical
                         int hidden_count=rand_word.length();
+                        //count miss
                         if (!rand_word.contains(user_guess)){
                             miss_chance++;
                         }
 
-
+                        //Count the remaining words
+                        if (rand_word.contains(user_guess)) {
+                            hidden_count--;
+                            if (hidden_count == 0) {
+                                isWin++;
+                                break;
+                            }
+                        }
                     }
 
                 }
