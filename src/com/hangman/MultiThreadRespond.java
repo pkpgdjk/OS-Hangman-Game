@@ -99,9 +99,11 @@ public class MultiThreadRespond implements Runnable{
                         user_guess = action.substring(5,6);
                         System.out.print("Guess: " + user_guess+"\n");
 
-
                         // Game Logical
-
+                        int hidden_count=rand_word.length();
+                        if (!rand_word.contains(user_guess)){
+                            miss_chance++;
+                        }
 
 
                     }
