@@ -114,6 +114,11 @@ public class MultiThreadRespond implements Runnable{
                                 break;
                             }
                         }
+                        //count miss word
+                        if (miss_chance>=MAX_TRY){
+                            isLose++;
+                            break;
+                        }
                     }
 
                 }
