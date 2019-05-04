@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'java src/com/hangman/Server.java'
+		sh 'echo this is server'
             }
         }
     }
