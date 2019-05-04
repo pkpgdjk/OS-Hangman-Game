@@ -35,6 +35,8 @@ public class MultiThreadRespond implements Runnable{
         String user_guess = "";
         int miss_chance = 0;
         char[] missed = new char[7];
+        boolean letter_found = false;
+        boolean solved = false;
 
         //Random word to Client
         rand_word = Word[ (int)(Math.random() * Word.length) ].toLowerCase();
@@ -52,7 +54,7 @@ public class MultiThreadRespond implements Runnable{
         int  res_miss_count = miss_chance;
         StringBuilder res_missed = new StringBuilder();
 
-        ////   hidden_word|miss_count|missed|isWin|isLose
+        // hidden_word คือช่องว่างที่ให้เติม|miss_count นับตัวที่เดาผิด|missed ตัวที่ผิด |isWin บอกว่าขนะ |isLose บอกว่าาแพ้
 
         System.out.println("Start Games : " + rand_word);
         while(true){
@@ -100,27 +102,37 @@ public class MultiThreadRespond implements Runnable{
                         System.out.print("Guess: " + user_guess+"\n");
 
                         // Game Logical
-                        int hidden_count=rand_word.length();
-                        //count miss
-                        if (!rand_word.contains(user_guess)){
-                            miss_chance++;
-                        }
-
-                        //Count the remaining words
-                        if (rand_word.contains(user_guess)) {
-                            hidden_count--;
-                            if (hidden_count == 0) {
-                                isWin++;
-                                break;
+                        letter_found = false;
+                        for (int i = 0; i < rand_word.length(); i++) {
+                            if (user_guess.toLowerCase().charAt(0) == rand_word.toLowerCase().charAt(i)) {
+                                hidden_word[i] = rand_word.charAt(i);
+                                letter_found = true;
                             }
                         }
-                        //count miss word
-                        if (miss_chance>=MAX_TRY){
-                            isLose++;
-                            break;
+                        if (!letter_found) {
+                            missed[miss_chance] = user_guess.charAt(0);
+                            miss_chance++;
+                        }
+                        int hidden_count = 0;
+                        for (int i = 0; i < rand_word.length(); i++) {
+                            if ('_' == hidden_word[i])
+                                hidden_count++;
+                        }
+                        if (hidden_count > 0) {
+                            solved = false;
+                        } else{
+                            solved = true;
                         }
                     }
 
+                    /// check win or lose
+                    if (miss_chance >= MAX_TRY){
+                        isLose = 1;
+                    }
+                    if (solved){
+                        isWin = 1;
+                    }
+                    System.out.println("---------------------------------------------------------------");
                 }
             }catch(Exception e){
                 System.out.println(e);
