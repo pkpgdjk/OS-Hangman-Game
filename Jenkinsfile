@@ -9,7 +9,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'java src/com/hangman/Server.java'
-                sh 'pwd'
             }
         }
     }
