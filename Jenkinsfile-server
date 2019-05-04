@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'openjdk:12'
-            args '-p 8000:8000'
+            args '-p 1000:65535'
         }
     }
     stages {
