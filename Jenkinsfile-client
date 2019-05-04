@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'java src/com/hangman/Client.java'
-		            sh 'echo this is client'
+		sh 'echo this is client 2'
             }
         }
     }
