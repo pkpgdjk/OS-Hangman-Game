@@ -31,7 +31,7 @@ DOCKERFILE_NAME="Dockerfile-client"
 echo -e "${BGreen}===> REMOVE CONTAINERS <===${OFF}"
 echo -e "${Blude}removing $CONTAINER_NAME${OFF}"
 docker rm -f $CONTAINER_NAME
-echo -e "${BGreen}===> BUILD DOCKER IMAGE <==="
+echo -e "${BGreen}===> BUILD DOCKER IMAGE <===${OFF}"
 docker build -f $DOCKERFILE_NAME -t $IMAGE_NAME .
 
 echo -e "${BGreen}===> RUN THIS COMMAND <====${OFF}"
