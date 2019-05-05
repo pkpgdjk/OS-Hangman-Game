@@ -1,5 +1,3 @@
-package com.hangman;
-
 import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.DataOutputStream;
 import java.io.IOException;
