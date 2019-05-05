@@ -185,6 +185,11 @@ public class Client {
             e.printStackTrace();
         }
     }
+    
+    public static void clearScreen() {  
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
+    }
 
     public static void main( String[] args ) {
         Scanner keyboard;
@@ -212,6 +217,8 @@ public class Client {
             getStatus();
 
             while (isWin == 0 && isLose ==0) {
+                // clear console screen
+                clearScreen();
 
 
                 // print game status
