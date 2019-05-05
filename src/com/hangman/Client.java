@@ -221,6 +221,10 @@ public class Client {
                 clearScreen();
 
 
+                //draw hangman
+                drawman();
+                
+                
                 // print game status
                 System.out.println("****************** You have " + (MAX_TRY - miss_chance) + " turns left *******************");
                 System.out.println("------------------------------------------------------------");
@@ -229,8 +233,7 @@ public class Client {
                 System.out.println("Hints: "+getHints());
                 System.out.print("Guess: ");
                 
-                //draw hangman
-                drawman();
+                
 
                 // send user input
                 sendUserInput(keyboard.nextLine());
