@@ -23,12 +23,55 @@ public class MultiThreadRespond implements Runnable{
         }
     }
 
+    public String getHints(String rand_word,String Word[]){
+        String Hints;
+
+        if(rand_word.equals(Word[0].toLowerCase()))
+            Hints = "Wizzards Have magic wand and spell Wingardium Leviosa  ";
+        else if(rand_word.equals(Word[1].toLowerCase()))
+            Hints = "morethan friend but lessthan girlfriend";
+        else if(rand_word.equals(Word[2].toLowerCase()))
+            Hints = "Red clothes can climb the tower";
+        else if(rand_word.equals(Word[3].toLowerCase()))
+            Hints = "She is a cybrog";
+        else if(rand_word.equals(Word[4].toLowerCase()))
+            Hints = "Disney Princess with snow world";
+        else if(rand_word.equals(Word[5].toLowerCase()))
+            Hints = "Dark Knight Hero of the Gotham City";
+        else if(rand_word.equals(Word[6].toLowerCase()))
+            Hints = "Red Clothes funny and joke";
+        else if(rand_word.equals(Word[7].toLowerCase()))
+            Hints = "Disney Princess who has lost her shoes for the man :X";
+        else if(rand_word.equals(Word[8].toLowerCase()))
+            Hints = "Blue skin in the beautiful word speak navi language";
+        else if(rand_word.equals(Word[9].toLowerCase()))
+            Hints = "Romantic movie in the ship but bad ending in the end";
+        else if(rand_word.equals(Word[10].toLowerCase()))
+            Hints = "Mix Marvel Heroes";
+        else if(rand_word.equals(Word[11].toLowerCase()))
+            Hints = "HEROES FAMILY";
+        else if(rand_word.equals(Word[12].toLowerCase()))
+            Hints = "Yellow tiny body gang with funny moment";
+        else if(rand_word.equals(Word[13].toLowerCase()))
+            Hints = "Atlantis DC HEROES";
+        else if(rand_word.equals(Word[14].toLowerCase()))
+            Hints = "Epic Robot can transform their body";
+        else if(rand_word.equals(Word[15].toLowerCase()))
+            Hints = "007";
+        else if(rand_word.equals(Word[16].toLowerCase()))
+            Hints = "Cartoon full of animals";
+        else
+            Hints = "4 guys from reality to the game";
+
+        return Hints;
+    }
+
     @Override
     public void run() {
         //Determine Word
         String  [] Word = { "Harrypotter","Friendzone","Spiderman","Alita",
                 "Frozen","Batman","Deadpool","Sinderella", "Avatar",
-                "Titanic","Avengers","Incredibles","Minions", "Aquaman ",
+                "Titanic","Avengers","Incredibles","Minions", "Aquaman",
                 "Transformers","Skyfall","Zootopia", "Jumanji"};
         String rand_word;
         char[] hidden_word;
@@ -37,9 +80,11 @@ public class MultiThreadRespond implements Runnable{
         char[] missed = new char[7];
         boolean letter_found = false;
         boolean solved = false;
+        String Hints;
 
         //Random word to Client
         rand_word = Word[ (int)(Math.random() * Word.length) ].toLowerCase();
+        Hints = getHints(rand_word,Word);
         //Determine all hidden_word equals Word that random
         hidden_word = new char[rand_word.length()];
 
@@ -91,7 +136,10 @@ public class MultiThreadRespond implements Runnable{
                     }else if (action.equals("getAnswer")) {
                         //Show answer that random to Client
                         socketOutput.writeObject(rand_word);
-                    }else if (action.equals("exit")) {
+                    }else if (action.equals("getHints")) {
+                        //Show answer that random to Client
+                        socketOutput.writeObject(Hints);
+                    } else if (action.equals("exit")) {
                         //Close Socket
                         socketOutput.close();
                         socketInput.close();

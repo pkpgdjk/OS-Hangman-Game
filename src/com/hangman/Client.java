@@ -45,9 +45,6 @@ public class Client {
 
     }
 
-
-
-
     private static void drawman(){
 
 
@@ -118,29 +115,15 @@ public class Client {
          }
 
          else if(miss_chance == 7) {
-             System.out.println(" ...........           .         ....            ....   ...........    ............   .           .   ...........   ............                                                                         ");
-             System.out.println(" .                   .   .       .   .          .   .   .              .          .    .         .    .             .            .                               ");
-             System.out.println(" .                  .     .      .    .        .    .   .              .          .     .       .     .             .            .            ");
-             System.out.println(" .    ......       . . . . .     .     .      .     .   ............   .          .      .     .      ...........   .............                                              ");
-             System.out.println(" .         .      .         .    .      .    .      .   .              .          .       .   .       .             .          .                   ");
-             System.out.println(" .         .     .           .   .       .  .       .   .              .          .        . .        .             .           .               ");
-             System.out.println(" ...........    .             .  .        ..        .   ............   ............         .         ...........   .             .                             ");
+             System.out.println(" ...........           .         ....            ....   ...........    ............   .           .   ...........   ............  ");
+             System.out.println(" .                   .   .       .   .          .   .   .              .          .    .         .    .             .            .");
+             System.out.println(" .                  .     .      .    .        .    .   .              .          .     .       .     .             .            .");
+             System.out.println(" .    ......       . . . . .     .     .      .     .   ............   .          .      .     .      ...........   ............. ");
+             System.out.println(" .         .      .         .    .      .    .      .   .              .          .       .   .       .             .          .  ");
+             System.out.println(" .         .     .           .   .       .  .       .   .              .          .        . .        .             .           . ");
+             System.out.println(" ...........    .             .  .        ..        .   ............   ............         .         ...........   .             . ");
 
          }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }//drawman
@@ -148,6 +131,19 @@ public class Client {
     private static String getAnswer(){
         try {
             socketOutput.writeObject("getAnswer");
+            String input = (String) socketInput.readObject();
+            return input;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    private static String getHints(){
+        try {
+            socketOutput.writeObject("getHints");
             String input = (String) socketInput.readObject();
             return input;
         } catch (IOException e) {
@@ -199,14 +195,15 @@ public class Client {
                 System.out.println("You have " + (MAX_TRY - miss_chance) + " turns left.");
                 System.out.println("Word:\t" + hidden_word);
                 System.out.println("Misses: " + missed);
+                System.out.println("Hints: "+getHints());
                 System.out.print("\nGuess: ");
+
 
                 // send user input
                 sendUserInput(keyboard.nextLine());
 
                 // get new game status
                 getStatus();
-
                 drawman();
 
 
