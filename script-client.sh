@@ -4,10 +4,10 @@ IMAGE_NAME="hangman-client-image"
 DOCKERFILE_NAME="Dockerfile-client"
 
 
-ECHO "===> REMOVE CONTAINERS <===="
+echo "===> REMOVE CONTAINERS <===="
 echo "removing $CONTAINER_NAME"
 docker rm -f $CONTAINER_NAME
-ECHO "===> BUILD DOCKER IMAGE <===="
+echo "===> BUILD DOCKER IMAGE <===="
 docker build -f $DOCKERFILE_NAME -t $IMAGE_NAME .
 
 echo "RUN THIS COMMAND"
