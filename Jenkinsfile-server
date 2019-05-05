@@ -1,0 +1,16 @@
+pipeline {
+    agent {
+        docker {
+            image 'openjdk:12'
+            args '-p 1000:65535'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'java src/com/hangman/Server.java'
+		sh 'echo this is server sssss'
+            }
+        }
+    }
+}
