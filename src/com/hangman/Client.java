@@ -228,13 +228,15 @@ public class Client {
                 System.out.println("Misses: " + missed);
                 System.out.println("Hints: "+getHints());
                 System.out.print("Guess: ");
+                
+                //draw hangman
+                drawman();
 
                 // send user input
                 sendUserInput(keyboard.nextLine());
 
                 // get new game status
                 getStatus();
-                drawman();
 
 
 
