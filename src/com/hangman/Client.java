@@ -249,11 +249,17 @@ public class Client {
             //System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
             if (isWin==1){
+                //draw hangman
+                drawman();
+                
                 System.out.println( "Yeah! you Win" );
                 System.out.println( "The word was..." + hidden_word );
 
             }
             else if (isLose ==1) {
+                //draw hangman
+                drawman();
+                
                 String answer = getAnswer();
                 System.out.println("Noooooob guy!!");
                 System.out.println("The word was..." + answer);
