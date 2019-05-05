@@ -34,5 +34,5 @@ docker rm -f $CONTAINER_NAME
 echo -e "${BGreen}===> BUILD DOCKER IMAGE <===${OFF}"
 docker build -f $DOCKERFILE_NAME -t $IMAGE_NAME .
 
-echo -e "${BGreen}===> RUN THIS COMMAND <====${OFF}"
-echo -e " -----> ${BBlue}docker run -it --name ${CONTAINER_NAME} --link hangman-server:server ${IMAGE_NAME} ${OFF}"
+echo -e "${BGreen}===> RUN DOCKER CONTAINER <====${OFF}"
+docker run -it --name $CONTAINER_NAME --link hangman-server:server $IMAGE_NAME
