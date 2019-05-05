@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'openjdk:12'
+            image 'openjdk:7'
             args '-p 1000:65535'
         }
     }
