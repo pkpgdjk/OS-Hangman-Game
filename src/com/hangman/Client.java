@@ -124,6 +124,20 @@ public class Client {
              System.out.println(" ...........    .             .  .        ..        .   ............   ............         .         ...........   .             . ");
 
          }
+         if(isWin==1){
+             System.out.println(".          .    .................   .              .     .            .      ..............    .          .   ");
+             System.out.println(" .        .     .               .   .              .     .            .            .           . .        . ");
+             System.out.println("  .      .      .               .   .              .     .            .            .           .   .      .  ");
+             System.out.println("   .    .       .               .   .              .     .            .            .           .    .     .  ");
+             System.out.println("    .  .        .               .   .              .     .     ..     .            .           .     .    .  ");
+             System.out.println("     .          .               .   .              .     .    .  .    .            .           .      .   .");
+             System.out.println("     .          .               .   .              .     .   .    .   .            .           .       .  .  ");
+             System.out.println("     .          .               .   .              .     .  .      .  .            .           .        . .");
+             System.out.println("     .          .               .   .              .     . .        . .            .           .         .. ");
+             System.out.println("     .          .................    ..............      ..          ..      ..............    .          . ");
+
+
+         }
 
 
     }//drawman
