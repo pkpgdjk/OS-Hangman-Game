@@ -1,0 +1,5 @@
+FROM openjdk:12
+COPY . /usr/src/hangman-client/
+WORKDIR /usr/src/hangman-client/src/com/hangman/
+RUN javac -encoding UTF-8 *.java
+CMD ["java", "Client"]
