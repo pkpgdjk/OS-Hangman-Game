@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd src/com/hangman/ && javac -encoding UTF-8 *.java'
-		sh 'cd src/com/hangman/ && java Server'
+		sh 'cd src/com/hangman/ && ls && pwd && java Server'
 		sh 'echo this is server sssss'
             }
         }
