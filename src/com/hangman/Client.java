@@ -49,92 +49,102 @@ public class Client {
 
 
          if(miss_chance == 1) {
-             System.out.println("         ____________");
-             System.out.println("        |      |     |");
-             System.out.println("        |            |");
-             System.out.println("        |            |");
-             System.out.println("        |            |");
-             System.out.println("        |            |");
-             System.out.println("         ____________");
-             System.out.print("\n");
+             System.out.println("\t\t\t\t\t     ____________");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t ___|________________");
         }
 
         else if(miss_chance == 2) {
-            System.out.println("         ____________");
-            System.out.println("        |      |     |");
-            System.out.println("        |      0     |");
-            System.out.println("        |            |");
-            System.out.println("        |            |");
-            System.out.println("        |            |");
-            System.out.println("         ____________");
-            System.out.print("\n");
+             System.out.println("\t\t\t\t\t     ____________");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            O ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t    |             ");
+             System.out.println("\t\t\t\t\t ___|________________");
         }
 
          else if(miss_chance == 3) {
-             System.out.println("         ____________");
-             System.out.println("        |      |     |");
-             System.out.println("        |      0     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |            |");
-             System.out.println("         ____________");
-             System.out.print("\n");
+             System.out.println("\t\t\t\t\t     ____________");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            O");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t ___|________________");
          }
 
          else if(miss_chance == 4) {
-             System.out.println("         ____________");
-             System.out.println("        |      |     |");
-             System.out.println("        |      0     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |     /      |");
-             System.out.println("         ____________");
-             System.out.print("\n");
+             System.out.println("\t\t\t\t\t     ____________");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            O");
+             System.out.println("\t\t\t\t\t    |           /|");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t ___|________________");
          }
 
          else if(miss_chance == 5) {
-             System.out.println("         ____________");
-             System.out.println("        |      |     |");
-             System.out.println("        |      0     |");
-             System.out.println("        |    /_|     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |     /      |");
-             System.out.println("         ____________");
-             System.out.print("\n");
+             System.out.println("\t\t\t\t\t     ____________");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            O");
+             System.out.println("\t\t\t\t\t    |           /|\\");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t    |            |");
+             System.out.println("\t\t\t\t\t ___|________________");
          }
 
          else if(miss_chance == 6) {
-             System.out.println("         ____________");
-             System.out.println("        |      |     |");
-             System.out.println("        |     0|      |");
-             System.out.println("        |     /|     |");
-             System.out.println("        |      |     |");
-             System.out.println("        |      /     |");
-             System.out.println("         ____________");
-             System.out.print("\n");
+             System.out.println("\t\t\t\t\t      ____________");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |            O");
+             System.out.println("\t\t\t\t\t     |           /|\\");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |           /|");
+             System.out.println("\t\t\t\t\t  ___|________________");
          }
 
          else if(miss_chance == 7) {
-             System.out.println(" ...........           .         ....            ....   ...........    ............   .           .   ...........   ............  ");
-             System.out.println(" .                   .   .       .   .          .   .   .              .          .    .         .    .             .            .");
-             System.out.println(" .                  .     .      .    .        .    .   .              .          .     .       .     .             .            .");
-             System.out.println(" .    ......       . . . . .     .     .      .     .   ............   .          .      .     .      ...........   ............. ");
-             System.out.println(" .         .      .         .    .      .    .      .   .              .          .       .   .       .             .          .  ");
-             System.out.println(" .         .     .           .   .       .  .       .   .              .          .        . .        .             .           . ");
+             System.out.println("\t\t\t\t\t      ____________");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |            O");
+             System.out.println("\t\t\t\t\t     |           /|\\");
+             System.out.println("\t\t\t\t\t     |            |");
+             System.out.println("\t\t\t\t\t     |           /|\\");
+             System.out.println("\t\t\t\t\t  ___|________________");
+             System.out.println("----------------------------------------------------------------------------------------------------------------------------------" );
+             System.out.println(" ...........           .         ....            ....   ...........    ............   .           .   ...........   .............   ");
+             System.out.println(" .                   .   .       .   .          .   .   .              .          .    .         .    .             .            .  ");
+             System.out.println(" .                  .     .      .    .        .    .   .              .          .     .       .     .             .            .  ");
+             System.out.println(" .    ......       . . . . .     .     .      .     .   ............   .          .      .     .      ...........   .............   ");
+             System.out.println(" .         .      .         .    .      .    .      .   .              .          .       .   .       .             .          .    ");
+             System.out.println(" .         .     .           .   .       .  .       .   .              .          .        . .        .             .           .   ");
              System.out.println(" ...........    .             .  .        ..        .   ............   ............         .         ...........   .             . ");
 
          }
          if(isWin==1){
+             System.out.println("------------------------------------------------------------------------------------------------------------");
              System.out.println(".          .    .................   .              .     .            .      ..............    .          .   ");
              System.out.println(" .        .     .               .   .              .     .            .            .           . .        . ");
              System.out.println("  .      .      .               .   .              .     .            .            .           .   .      .  ");
              System.out.println("   .    .       .               .   .              .     .            .            .           .    .     .  ");
              System.out.println("    .  .        .               .   .              .     .     ..     .            .           .     .    .  ");
-             System.out.println("     .          .               .   .              .     .    .  .    .            .           .      .   .");
+             System.out.println("     .          .               .   .              .     .    .  .    .            .           .      .   .  ");
              System.out.println("     .          .               .   .              .     .   .    .   .            .           .       .  .  ");
-             System.out.println("     .          .               .   .              .     .  .      .  .            .           .        . .");
-             System.out.println("     .          .               .   .              .     . .        . .            .           .         .. ");
-             System.out.println("     .          .................    ..............      ..          ..      ..............    .          . ");
+             System.out.println("     .          .               .   .              .     .  .      .  .            .           .        . .  ");
+             System.out.println("     .          .               .   .              .     . .        . .            .           .         ..  ");
+             System.out.println("     .          .................    ..............      ..          ..      ..............    .          .  ");
 
 
          }
@@ -205,13 +215,12 @@ public class Client {
 
 
                 // print game status
-                //System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
-                System.out.println("You have " + (MAX_TRY - miss_chance) + " turns left.");
+                System.out.println("****************** You have " + (MAX_TRY - miss_chance) + " turns left *******************");
+                System.out.println("------------------------------------------------------------");
                 System.out.println("Word:\t" + hidden_word);
                 System.out.println("Misses: " + missed);
                 System.out.println("Hints: "+getHints());
-                System.out.print("\nGuess: ");
-
+                System.out.print("Guess: ");
 
                 // send user input
                 sendUserInput(keyboard.nextLine());
